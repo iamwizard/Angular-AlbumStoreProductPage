@@ -7,12 +7,12 @@ import 'rxjs/add/operator/map';
 })
 export class ProductService {
 
-  private _albumUrl: string;  //a private class property
-  constructor(private _http: Http) { 
-    this._albumUrl = "../assets/album.json";
-  }
-  public getAlbum(id:number) {
+  private _albumUrl: '../assets/album.json';
+  
+  constructor(private _http: Http) { }
+
+  getAlbum(id: number) {
    return this._http.get(this._albumUrl)
-      .map(Response => Response.json()); //Mapping The JSON Response in getAlbum
+      .map((response) => response.json()); //Mapping The JSON Response in getAlbum
 }
 }
