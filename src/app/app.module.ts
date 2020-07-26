@@ -11,18 +11,26 @@ import { ProductService } from "./product.service";
 import { ProductTracklistingComponent } from './product-tracklisting/product-tracklisting.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes:Routes = [];
+appRoutes['path'] = 'products';
+appRoutes['component'] = 'ProductListComponent';
+
 @NgModule({
   declarations: [
     AppComponent,
     ProductPageComponent,
     ProductDescriptionComponent,
     ProductTracklistingComponent,
-    ProductListComponent
+    ProductListComponent,
+    RouterModule.forRoot(appRoutes)
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
