@@ -6,6 +6,12 @@
 ul {
     display: block;
     line-height: 30px;
+    list-style-type: none;
+}
+
+li {
+    display: block;
+    line-height: 30px;
 }
 
 button {
